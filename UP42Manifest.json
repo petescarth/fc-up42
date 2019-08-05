@@ -1,0 +1,16 @@
+{
+  "_up42_specification_version": 1,
+  "name": "jrsrp-fractional-cover",
+  "type": "processing",
+  "tags": [
+    "generic"
+  ],
+  "display_name": "JRSRP Fractional Cover",
+  "description": "This block applies the JRSRP fractional cover model to Sentinel 2 SR Data",
+  "parameters": {},
+  "machine": {
+    "type": "medium"
+  },
+  "input_capabilities": {},
+  "output_capabilities": {}
+}
