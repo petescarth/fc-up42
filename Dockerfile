@@ -1,7 +1,9 @@
-FROM continuumio/miniconda3
-
-RUN conda update --yes -c conda-forge --all
-RUN conda install --yes -c conda-forge rios fiona affine shapely rasterio pyproj proj4 blas kealib numpy dill requests scikit-learn bottleneck
+#FROM continuumio/miniconda3
+FROM  frolvlad/alpine-miniconda3
+RUN conda update --yes -c conda-forge --all \
+    && conda install --yes -c conda-forge rios fiona affine shapely rasterio pyproj proj4 numpy dill requests scikit-learn bottleneck poppler \
+    && conda update --yes -c conda-forge --all \
+    && conda clean -afy
 
 ARG manifest
 LABEL "up42_manifest"=$manifest
